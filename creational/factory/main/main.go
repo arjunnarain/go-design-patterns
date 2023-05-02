@@ -9,9 +9,14 @@ import (
 func main() {
 	ak47, _ := factory.GetGun(constants.AK47)
 	musket, _ := factory.GetGun(constants.MUSKET)
+	invalidGun, err := factory.GetGun("Random")
 
 	printDetails(ak47)
 	printDetails(musket)
+
+	if invalidGun.GetName() == "" && err.Code != 200 {
+		fmt.Printf("Public Message: %s", err.PublicMessage)
+	}
 }
 
 func printDetails(g factory.IGun) {
