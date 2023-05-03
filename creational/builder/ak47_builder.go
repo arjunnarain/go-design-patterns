@@ -11,21 +11,21 @@ func newAk47Builder() *AK47Builder {
 }
 
 func (a *AK47Builder) setMuzzleType() {
-	a.muzzleType = constants.AK47_MUZZLE_TYPE
+	a.MuzzleType = constants.AK47_MUZZLE_TYPE
 }
 
 func (a *AK47Builder) setAmmoType() {
-	a.ammoType = constants.AK47_AMMO_TYPE
+	a.AmmoType = constants.AK47_AMMO_TYPE
 }
 
 func (a *AK47Builder) setCartridgeCapacity() {
-	a.cartridgeCapacity = constants.AK47_CARTRIDGE_CAPACITY
+	a.CartridgeCapacity = constants.AK47_CARTRIDGE_CAPACITY
 }
 
-func (a *AK47Builder) getAK47() Gun {
+func (a *AK47Builder) getGun() Gun {
 	return Gun{
-		ammoType:          a.ammoType,
-		muzzleType:        a.muzzleType,
-		cartridgeCapacity: a.cartridgeCapacity,
+		AmmoType:          a.AmmoType,
+		MuzzleType:        a.MuzzleType,
+		CartridgeCapacity: a.CartridgeCapacity,
 	}
 }

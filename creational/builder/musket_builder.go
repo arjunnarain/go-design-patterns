@@ -11,21 +11,21 @@ func newMusketBuilder() *MusketBuilder {
 }
 
 func (a *MusketBuilder) setMuzzleType() {
-	a.muzzleType = constants.MUSKET_MUZZLE_TYPE
+	a.MuzzleType = constants.MUSKET_MUZZLE_TYPE
 }
 
 func (a *MusketBuilder) setAmmoType() {
-	a.ammoType = constants.MUSKET_AMMO_TYPE
+	a.AmmoType = constants.MUSKET_AMMO_TYPE
 }
 
 func (a *MusketBuilder) setCartridgeCapacity() {
-	a.cartridgeCapacity = constants.MUSKET_CARTRIDGE_CAPACITY
+	a.CartridgeCapacity = constants.MUSKET_CARTRIDGE_CAPACITY
 }
 
-func (a *MusketBuilder) getMusket() Gun {
+func (a *MusketBuilder) getGun() Gun {
 	return Gun{
-		ammoType:          a.ammoType,
-		muzzleType:        a.muzzleType,
-		cartridgeCapacity: a.cartridgeCapacity,
+		AmmoType:          a.AmmoType,
+		MuzzleType:        a.MuzzleType,
+		CartridgeCapacity: a.CartridgeCapacity,
 	}
 }

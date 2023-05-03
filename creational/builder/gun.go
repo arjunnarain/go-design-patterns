@@ -1,7 +1,7 @@
 package builder
 
 type Gun struct {
-	ammoType          string
-	muzzleType        string
-	cartridgeCapacity int64
+	AmmoType          string
+	MuzzleType        string
+	CartridgeCapacity int64
 }
