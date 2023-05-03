@@ -10,6 +10,10 @@ func main() {
 	ak47Builder, _ := builder.GetBuilder(constants.AK47)
 	musketBuilder, _ := builder.GetBuilder(constants.MUSKET)
 
+	_, invalidBuilderError := builder.GetBuilder("invalid")
+
+	fmt.Printf("Public Message: %s", invalidBuilderError.PublicMessage)
+
 	manufacturer := builder.NewDirector(ak47Builder)
 	ak47 := manufacturer.BuildGun()
 
